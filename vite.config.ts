@@ -26,10 +26,15 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src')
     }
   },
-  base: './',  // Alterando para caminho relativo
+  base: '/Site-EDH/',  // Voltando para o caminho do repositório
   build: {
     outDir: 'docs',
     assetsDir: 'assets',
-    emptyOutDir: true
+    emptyOutDir: true,
+    rollupOptions: {
+      output: {
+        manualChunks: undefined
+      }
+    }
   }
 })
