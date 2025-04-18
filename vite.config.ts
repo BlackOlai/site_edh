@@ -26,8 +26,10 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src')
     }
   },
-  base: '/Site-EDH/',
+  base: '/Site-EDH/',  // Confirme se este nome corresponde exatamente ao nome do seu repositório
   build: {
-    outDir: 'docs'  // Adicione esta configuração
+    outDir: 'docs',
+    assetsDir: 'assets',
+    emptyOutDir: true
   }
 })
