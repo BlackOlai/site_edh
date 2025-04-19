@@ -26,14 +26,17 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src')
     }
   },
-  base: '/Site-EDH/',  // Voltando para o caminho do repositório
+  base: '/Site-EDH/',
   build: {
     outDir: 'docs',
-    assetsDir: 'assets',
+    assetsDir: '',  // Removendo o assetsDir
     emptyOutDir: true,
     rollupOptions: {
       output: {
-        manualChunks: undefined
+        manualChunks: undefined,
+        assetFileNames: 'assets/[name].[ext]',
+        chunkFileNames: 'assets/[name].[hash].js',
+        entryFileNames: 'assets/[name].[hash].js'
       }
     }
   }
