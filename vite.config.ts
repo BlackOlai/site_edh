@@ -1,34 +1,27 @@
 import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react-swc'
+import react from '@vitejs/plugin-react'
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer'
 import path from 'path'
 
 export default defineConfig({
   plugins: [
     react(),
-    ViteImageOptimizer({
-      test: /\.(jpe?g|png)$/i,
-      includePublic: true,
-      logStats: true,
-      webp: {
-        quality: 80,
-      },
-      jpeg: {
-        quality: 80,
-      },
-      png: {
-        quality: 80,
-      }
-    })
+    ViteImageOptimizer({})
   ],
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src')
     }
   },
-  base: '/site_edh/',  // Atualizando para o novo nome do repositório
+  base: '/site_edh/',
   build: {
     outDir: 'docs',
-    emptyOutDir: true
+    emptyOutDir: true,
+    sourcemap: true,
+    rollupOptions: {
+      external: [
+        '@/components/ui/toaster'
+      ]
+    }
   }
 })
