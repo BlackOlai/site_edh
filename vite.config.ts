@@ -26,7 +26,7 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src')
     }
   },
-  base: '/Site-EDH/',
+  base: process.env.NODE_ENV === 'production' ? '/Site-EDH/' : '/',
   build: {
     outDir: 'docs',
     assetsDir: '',  // Removendo o assetsDir
