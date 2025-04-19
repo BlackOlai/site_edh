@@ -17,11 +17,6 @@ export default defineConfig({
   build: {
     outDir: 'docs',
     emptyOutDir: true,
-    sourcemap: true,
-    rollupOptions: {
-      external: [
-        '@/components/ui/toaster'
-      ]
-    }
+    sourcemap: true
   }
 })
