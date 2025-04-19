@@ -26,18 +26,9 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src')
     }
   },
-  base: process.env.NODE_ENV === 'production' ? '/Site-EDH/' : '/',
+  base: '/site_edh/',  // Atualizando para o novo nome do repositório
   build: {
     outDir: 'docs',
-    assetsDir: '',  // Removendo o assetsDir
-    emptyOutDir: true,
-    rollupOptions: {
-      output: {
-        manualChunks: undefined,
-        assetFileNames: 'assets/[name].[ext]',
-        chunkFileNames: 'assets/[name].[hash].js',
-        entryFileNames: 'assets/[name].[hash].js'
-      }
-    }
+    emptyOutDir: true
   }
 })
