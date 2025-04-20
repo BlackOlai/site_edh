@@ -4,72 +4,60 @@ import { Menu, X } from "lucide-react";
 import { Link } from "react-scroll";
 
 export const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
-
   return (
-    <header className="fixed w-full bg-blue-600 shadow-md z-50">
-      <div className="container mx-auto px-4">
-        <div className="flex justify-between items-center h-20">
-          <div className="">
-            <img src="/logo.png" alt="Logo" className="h-16" />
-          </div>
+    <header className="fixed w-full z-50 bg-black/60 backdrop-blur-sm shadow-md">
+      <nav className="container mx-auto px-4 py-4">
+        <div className="flex items-center justify-between">
+          {/* Logo */}
+          <a href="#hero" className="flex items-center">
+            <img src="/site_edh/images/logo.png" alt="EDH Logo" className="h-14" />
+          </a>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
-            <Link
-              to="hero"
-              spy={true}
-              smooth={true}
-              offset={-100}
-              className="text-white hover:text-yellow-500 transition-colors cursor-pointer"
+          {/* Menu Items - Usando scroll suave */}
+          <div className="hidden md:flex items-center space-x-8">
+            <a 
+              href="#sobre" 
+              className="text-white hover:text-yellow-600 transition-colors"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('sobre')?.scrollIntoView({ behavior: 'smooth' });
+              }}
             >
-              Início
-            </Link>
-            <a href="#sobre" className="text-white hover:text-yellow-500 transition-colors">
               Sobre
             </a>
-            <a href="#servicos" className="text-white hover:text-yellow-500 transition-colors">
+            <a 
+              href="#servicos" 
+              className="text-white hover:text-yellow-600 transition-colors"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('servicos')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
               Serviços
             </a>
-            <a href="#equipe" className="text-white hover:text-yellow-500 transition-colors">
+            <a 
+              href="#equipe" 
+              className="text-white hover:text-yellow-600 transition-colors"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('equipe')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
               Equipe
             </a>
-            <a href="#contato" className="text-white hover:text-yellow-500 transition-colors">
+            <a 
+              href="#contato" 
+              className="text-white hover:text-yellow-600 transition-colors"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('contato')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
               Contato
             </a>
-          </nav>
-
-          {/* Mobile Menu Button */}
-          <button className="md:hidden text-white" onClick={toggleMenu}>
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          </div>
         </div>
-
-        {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <nav className="md:hidden py-4 animate-fade-up">
-            <div className="flex flex-col space-y-4">
-              <a href="#inicio" className="text-black hover:text-primary transition-colors" onClick={toggleMenu}>
-                Início
-              </a>
-              <a href="#sobre" className="text-black hover:text-primary transition-colors" onClick={toggleMenu}>
-                Sobre
-              </a>
-              <a href="#servicos" className="text-black hover:text-primary transition-colors" onClick={toggleMenu}>
-                Serviços
-              </a>
-              <a href="#equipe" className="text-black hover:text-primary transition-colors" onClick={toggleMenu}>
-                Equipe
-              </a>
-              <a href="#contato" className="text-black font-bold hover:text-primary transition-colors hover:scale-110 hover:shadow-md rounded-full" onClick={toggleMenu}>
-                Contato
-              </a>
-            </div>
-          </nav>
-        )}
-      </div>
+      </nav>
     </header>
   );
 };

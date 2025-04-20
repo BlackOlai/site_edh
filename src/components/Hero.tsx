@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
 
 export const Hero = () => {
   return (
@@ -7,20 +8,32 @@ export const Hero = () => {
         autoPlay
         loop
         muted
-        className="absolute inset-0 h-full w-full object-cover"
-        src="/video.mp4"
+        playsInline
+        className="absolute inset-0 h-full w-full object-cover opacity-90"
       >
+        <source src="/site_edh/videos/Página inicial.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
       </video>
-      
-      <div className="relative z-10 bg-black/30 min-h-screen w-full">
+
+      <div className="relative z-10 bg-gradient-to-b from-gray-900/50 to-blue-900/30 backdrop-blur-sm min-h-screen w-full">
         <div className="container mx-auto px-4 min-h-screen flex items-center justify-center">
           <div className="text-center text-white py-20">
-            <img 
-              src="/logo1.png" 
-              alt="Logo EDH" 
-              className="mx-auto mb-8 w-72 h-auto max-w-full"
+            <motion.img
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              src="/site_edh/images/logo1.png"
+              alt="Logo EDH"
+              className="mx-auto mb-8 w-48 md:w-72 h-auto max-w-full"
             />
-            <h1 className="text-5xl font-bold mb-4">Excelência em Desenvolvimento Humano</h1>
+            <motion.h1 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.5 }}
+              className="text-3xl md:text-5xl font-bold mb-4"
+            >
+              Excelência em Desenvolvimento Humano
+            </motion.h1>
             <p className="text-xl mb-8 max-w-2xl mx-auto">
               Transformando vidas através do desenvolvimento humano integral. 
               Oferecemos atendimento especializado em diversas áreas da saúde mental e desenvolvimento.

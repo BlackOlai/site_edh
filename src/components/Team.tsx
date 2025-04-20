@@ -95,7 +95,7 @@ const teamImages = [
     description: "Minha principal função é o bem-estar, utilizando técnicas específicas para tratar dores musculoesqueléticas, melhorar a nobilidade, e prevenir lesões. Sempre focando em restaurar o equilíbrio do corpo e melhorar a qualidade de vida.",
   },
   {
-    image: "Tauany-Moreira.jpg",
+    image: "Tauany-.jpg", // Era "Tauany-Moreira.jpg"
     title: "Tauany Moreira",
     profession: "Psicóloga - CRP: 09/016110",
     description: "Graduada em Psicologia, estudo os fundamentos da Psicanálise com foco crítico e social. Busco compreender a psicologia de forma integrada, considerando as vivências de cada pessoa, especialmente de mulheres e do público LGBTQIA+. Acredito na importância de uma escuta atenta e inclusiva, que acolha e contribua para a transformação diante de questões de gênero, sexualidade e desigualdades sociais.",
@@ -146,15 +146,16 @@ export const Team = () => {
                 <CarouselItem key={index} className="pl-1 md:basis-1/2 lg:basis-1/3">
                   <motion.div
                     variants={fadeInUp}
-                    whileHover={{ scale: 1.02 }}
-                    className="h-full cursor-pointer"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="h-full cursor-pointer transform transition-all duration-300"
                     onClick={() => setSelectedMember(member)}
                   >
-                    <Card className="h-full hover:shadow-xl transition-shadow duration-300">
+                    <Card className="h-full hover:shadow-2xl transition-shadow duration-300">
                       <CardHeader>
                         <div className="relative w-full pb-[100%] mb-4 overflow-hidden rounded-t-lg">
                           <img
-                            src={`/${member.image}`}
+                            src={`images/${member.image}`}
                             alt={member.title}
                             className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 hover:scale-105"
                           />
@@ -189,7 +190,7 @@ export const Team = () => {
               <div className="mt-4">
                 <div className="relative w-full pb-[75%] mb-6">
                   <img
-                    src={`/${selectedMember.image}`}
+                    src={`/site_edh/images/${selectedMember.image}`}
                     alt={selectedMember.title}
                     className="absolute inset-0 w-full h-full object-contain rounded-lg"
                   />

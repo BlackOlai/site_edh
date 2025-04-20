@@ -2,7 +2,26 @@ import { motion } from "framer-motion";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0 }
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+};
+
+const staggerContainer = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+      delayChildren: 0.3
+    }
+  }
+};
+
+const cardHover = {
+  hover: {
+    scale: 1.03,
+    boxShadow: "0 20px 25px -5px rgb(0 0 0 / 0.1)",
+    transition: { type: "spring", stiffness: 300 }
+  }
 };
 
 export const About = () => {
@@ -23,29 +42,37 @@ export const About = () => {
 
       <div className="container mx-auto px-4 py-20">
         <motion.div 
+          variants={staggerContainer}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delayChildren: 0.2, staggerChildren: 0.3 }}
+          viewport={{ once: true, margin: "-100px" }}
           className="text-center pt-10"
         >
+          {/* Mosaico com zoom suave */}
           <motion.div 
             variants={fadeInUp}
+            whileHover={{ scale: 1.02 }}
+            transition={{ duration: 0.5 }}
             className="relative mb-16 mt-12"
           >
-            <div className="absolute inset-0 bg-gradient-to-b from-purple-300/50 to-purple-200 rounded-lg"></div>
-            <img 
-              src="/mosaico.jpg" 
-              alt="Mosaico EDH" 
-              className="mx-auto rounded-lg shadow-2xl max-w-5xl w-full object-cover h-[500px] object-top"
-            />
+            <div className="absolute inset-0 bg-gradient-to-b from-purple-300/30 to-purple-200/50 backdrop-blur-sm rounded-lg"></div>
+            <div className="w-full h-[500px] relative rounded-lg shadow-2xl overflow-hidden">
+              <motion.img 
+                src="/site_edh/images/mosaico.jpg"
+                alt="Mosaico EDH"
+                className="w-full h-full object-cover object-top opacity-80" // Adicionado opacity-80 aqui
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.8 }}
+              />
+            </div>
           </motion.div>
 
-          {/* Primeira seção: Quem Somos, Missão e Visão */}
+          {/* Cards principais com hover effect */}
           <div className="grid lg:grid-cols-3 gap-8 mb-12">
             <motion.div 
-              variants={fadeInUp}
-              className="bg-white/80 backdrop-blur-sm p-8 rounded-xl shadow-lg"
+              variants={cardHover}
+              whileHover="hover"
+              className="bg-white/80 backdrop-blur-sm p-8 rounded-xl shadow-lg transform transition-all duration-300"
             >
               <h2 className="text-3xl font-bold text-purple-900 mb-6">Quem Somos</h2>
               <p className="text-black leading-relaxed text-left">
@@ -79,12 +106,17 @@ export const About = () => {
             </motion.div>
           </div>
 
-          {/* Seção de Valores com mais destaque */}
+          {/* Seção de Valores */}
           <motion.div 
             variants={fadeInUp}
             className="mt-12 bg-white/80 backdrop-blur-sm p-10 rounded-xl shadow-lg"
           >
-            <h2 className="text-4xl font-bold text-purple-900 mb-8 text-center">Valores</h2>
+            <motion.h2 
+              variants={fadeInUp}
+              className="text-4xl font-bold text-purple-900 mb-8 text-center"
+            >
+              Valores
+            </motion.h2>
             <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
               <motion.div 
                 whileHover={{ scale: 1.02 }}
