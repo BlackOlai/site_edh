@@ -143,7 +143,7 @@ export const Team = () => {
           <Carousel className="w-full max-w-7xl mx-auto">
             <CarouselContent className="-ml-1">
               {teamImages.map((member, index) => (
-                <CarouselItem key={index} className="pl-1 md:basis-1/2 lg:basis-1/3">
+                <CarouselItem key={index} className="pl-1 basis-full md:basis-1/2 lg:basis-1/3">
                   <motion.div
                     variants={fadeInUp}
                     whileHover={{ scale: 1.05 }}
