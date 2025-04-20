@@ -158,13 +158,6 @@ export const Team = () => {
                             alt={member.title}
                             className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 hover:scale-105"
                           />
-                          
-                          // E também no Dialog:
-                          <img
-                            src={`/site_edh/${selectedMember.image}`}
-                            alt={selectedMember.title}
-                            className="absolute inset-0 w-full h-full object-contain rounded-lg"
-                          />
                         </div>
                         <CardTitle className="text-xl font-bold text-blue-900">{member.title}</CardTitle>
                         <p className="text-blue-700 font-medium">{member.profession}</p>
@@ -191,11 +184,12 @@ export const Team = () => {
           {selectedMember && (
             <>
               <DialogHeader>
+                <DialogTitle>{selectedMember.title}</DialogTitle>
               </DialogHeader>
               <div className="mt-4">
                 <div className="relative w-full pb-[75%] mb-6">
                   <img
-                    src={`/${selectedMember.image}`}
+                    src={`/site_edh/${selectedMember.image}`}
                     alt={selectedMember.title}
                     className="absolute inset-0 w-full h-full object-contain rounded-lg"
                   />
