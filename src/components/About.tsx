@@ -60,7 +60,7 @@ export const About = () => {
               <motion.img 
                 src="/site_edh/images/mosaico.jpg"
                 alt="Mosaico EDH"
-                className="w-full h-full object-cover object-top opacity-80" // Adicionado opacity-80 aqui
+                className="w-full h-full object-cover object-top opacity-80"
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.8 }}
               />

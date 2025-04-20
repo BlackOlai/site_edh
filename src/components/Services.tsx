@@ -139,7 +139,7 @@ export const Services = () => {
         </svg>
       </div>
       <img
-        src="/site_edh/imagem.jpg"  // Ajustando o caminho da imagem
+        src="/site_edh/images/imagem.jpg"  // Caminho corrigido
         alt="Service"
       />
     </section>

@@ -13,9 +13,11 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src')
     }
   },
-  base: '/site_edh/',
+  base: '/site_edh/', // Deve corresponder ao nome do seu repositório
   build: {
-    outDir: 'dist', // Altere 'docs' para 'dist'
-    emptyOutDir: true
+    outDir: 'docs',
+    assetsDir: 'assets',
+    emptyOutDir: true,
+    assetsInlineLimit: 4096 // Aumenta o limite para arquivos maiores (4KB padrão)
   }
 })
