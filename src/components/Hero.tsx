@@ -7,9 +7,9 @@ export const Hero = () => {
         autoPlay
         loop
         muted
-        className="absolute top-0 left-0 min-w-full min-h-full w-auto h-auto object-cover z-0 opacity-80"
+        className="absolute inset-0 h-full w-full object-cover"
+        src="/site_edh/video.mp4"  // Ajustando o caminho do vídeo
       >
-        <source src="/Página inicial.mp4" type="video/mp4" />
       </video>
       
       <div className="relative z-10 bg-black/30 min-h-screen w-full">
