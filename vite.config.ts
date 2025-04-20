@@ -16,7 +16,6 @@ export default defineConfig({
   base: '/site_edh/',
   build: {
     outDir: 'docs',
-    emptyOutDir: true,
-    sourcemap: true
+    emptyOutDir: true
   }
 })
