@@ -154,9 +154,16 @@ export const Team = () => {
                       <CardHeader>
                         <div className="relative w-full pb-[100%] mb-4 overflow-hidden rounded-t-lg">
                           <img
-                            src={`/${member.image}`}
+                            src={`/site_edh/${member.image}`}
                             alt={member.title}
                             className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                          />
+                          
+                          // E também no Dialog:
+                          <img
+                            src={`/site_edh/${selectedMember.image}`}
+                            alt={selectedMember.title}
+                            className="absolute inset-0 w-full h-full object-contain rounded-lg"
                           />
                         </div>
                         <CardTitle className="text-xl font-bold text-blue-900">{member.title}</CardTitle>
