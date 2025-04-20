@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import { OptimizedImage } from "@/components/ui/optimized-image";
 import { Menu, X } from "lucide-react";
 import { Link } from "react-scroll";
 
@@ -10,7 +11,7 @@ export const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <a href="#hero" className="flex items-center">
-            <img src="/site_edh/images/logo.png" alt="EDH Logo" className="h-14" />
+            <OptimizedImage src="/site_edh/images/logo.png" alt="EDH Logo" className="h-14" />
           </a>
 
           {/* Menu Items - Usando scroll suave */}
