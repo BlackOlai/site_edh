@@ -155,7 +155,7 @@ export const Team = () => {
                       <CardHeader>
                         <div className="relative w-full pb-[100%] mb-4 overflow-hidden rounded-t-lg">
                           <img
-                            src={`images/${member.image}`}
+                            src={`/site_edh/images/${member.image}`}
                             alt={member.title}
                             className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 hover:scale-105"
                           />
