@@ -35,7 +35,7 @@ export const About = () => {
           >
             <div className="absolute inset-0 bg-gradient-to-b from-purple-300/50 to-purple-200 rounded-lg"></div>
             <img 
-              src="/site_edh/mosaico.jpg" 
+              src="/mosaico.jpg" 
               alt="Mosaico EDH" 
               className="mx-auto rounded-lg shadow-2xl max-w-5xl w-full object-cover h-[500px] object-top"
             />

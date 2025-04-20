@@ -154,7 +154,7 @@ export const Team = () => {
                       <CardHeader>
                         <div className="relative w-full pb-[100%] mb-4 overflow-hidden rounded-t-lg">
                           <img
-                            src={`/site_edh/${member.image}`}
+                            src={`/${member.image}`}
                             alt={member.title}
                             className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 hover:scale-105"
                           />
@@ -189,7 +189,7 @@ export const Team = () => {
               <div className="mt-4">
                 <div className="relative w-full pb-[75%] mb-6">
                   <img
-                    src={`/site_edh/${selectedMember.image}`}
+                    src={`/${selectedMember.image}`}
                     alt={selectedMember.title}
                     className="absolute inset-0 w-full h-full object-contain rounded-lg"
                   />

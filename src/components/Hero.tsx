@@ -8,7 +8,7 @@ export const Hero = () => {
         loop
         muted
         className="absolute inset-0 h-full w-full object-cover"
-        src="/site_edh/video.mp4"
+        src="/video.mp4"
       >
       </video>
       
@@ -16,7 +16,7 @@ export const Hero = () => {
         <div className="container mx-auto px-4 min-h-screen flex items-center justify-center">
           <div className="text-center text-white py-20">
             <img 
-              src="/site_edh/logo1.png" 
+              src="/logo1.png" 
               alt="Logo EDH" 
               className="mx-auto mb-8 w-72 h-auto max-w-full"
             />
