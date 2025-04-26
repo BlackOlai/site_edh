@@ -95,7 +95,11 @@ const teamImages = [
     description: "Minha principal função é o bem-estar, utilizando técnicas específicas para tratar dores musculoesqueléticas, melhorar a nobilidade, e prevenir lesões. Sempre focando em restaurar o equilíbrio do corpo e melhorar a qualidade de vida.",
   },
   {
+<<<<<<< HEAD
     image: "Tauany-Moreira.jpg", // Era "Tauany-Moreira.jpg"
+=======
+    image: "Tauany-.jpg", // Era "Tauany-Moreira.jpg"
+>>>>>>> 422dbd255e0fcb73dfd4960b20fe4751866095cd
     title: "Tauany Moreira",
     profession: "Psicóloga - CRP: 09/016110",
     description: "Graduada em Psicologia, estudo os fundamentos da Psicanálise com foco crítico e social. Busco compreender a psicologia de forma integrada, considerando as vivências de cada pessoa, especialmente de mulheres e do público LGBTQIA+. Acredito na importância de uma escuta atenta e inclusiva, que acolha e contribua para a transformação diante de questões de gênero, sexualidade e desigualdades sociais.",
@@ -112,17 +116,29 @@ export const Team = () => {
   const [selectedMember, setSelectedMember] = useState(null);
 
   return (
+<<<<<<< HEAD
     <section id="equipe" className="relative min-h-screen w-full overflow-hidden bg-[url('/site_edh/images/BG4.jpg')] bg-cover bg-center">
+=======
+    <section id="equipe" className="relative min-h-screen w-full overflow-hidden bg-yellow-100">
+>>>>>>> 422dbd255e0fcb73dfd4960b20fe4751866095cd
       {/* Onda Superior */}
       <div className="absolute top-0 left-0 w-full overflow-hidden leading-none">
         <svg className="relative block w-full h-[50px]" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
           <defs>
             <linearGradient id="teamWaveGradient1" x1="0%" y1="0%" x2="100%" y2="0%">
+<<<<<<< HEAD
               <stop offset="0%" style={{ stopColor: '#BEA151' }} />
               <stop offset="100%" style={{ stopColor: '#121D2B' }} />
             </linearGradient>
           </defs>
           <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" fill="(#BEA151)"></path>
+=======
+              <stop offset="0%" style={{ stopColor: '#bfdbfe' }} />
+              <stop offset="100%" style={{ stopColor: '#dbeafe' }} />
+            </linearGradient>
+          </defs>
+          <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" fill="url(#teamWaveGradient1)"></path>
+>>>>>>> 422dbd255e0fcb73dfd4960b20fe4751866095cd
         </svg>
       </div>
 
@@ -130,20 +146,35 @@ export const Team = () => {
         <motion.div
           initial="hidden"
           whileInView="visible"
+<<<<<<< HEAD
           viewport={{ once: false }}
+=======
+          viewport={{ once: true }}
+>>>>>>> 422dbd255e0fcb73dfd4960b20fe4751866095cd
           transition={{ duration: 0.8, delayChildren: 0.2, staggerChildren: 0.1 }}
         >
           <motion.h2 
             variants={fadeInUp}
+<<<<<<< HEAD
             className="text-4xl font-bold text-center text-blue-100 mb-12 pt-10"
+=======
+            className="text-4xl font-bold text-center text-blue-900 mb-12 pt-10"
+>>>>>>> 422dbd255e0fcb73dfd4960b20fe4751866095cd
           >
             Nossa Equipe
           </motion.h2>
           
+<<<<<<< HEAD
           <Carousel className="w-full max-w-7x1 mx-auto">
             <CarouselContent className="-ml-4">
               {teamImages.map((member, index) => (
                 <CarouselItem key={index} className="pl-4 basis-full md:basis-1/2 lg:basis-1/4">
+=======
+          <Carousel className="w-full max-w-7xl mx-auto">
+            <CarouselContent className="-ml-1">
+              {teamImages.map((member, index) => (
+                <CarouselItem key={index} className="pl-1 md:basis-1/2 lg:basis-1/3">
+>>>>>>> 422dbd255e0fcb73dfd4960b20fe4751866095cd
                   <motion.div
                     variants={fadeInUp}
                     whileHover={{ scale: 1.05 }}
@@ -151,17 +182,30 @@ export const Team = () => {
                     className="h-full cursor-pointer transform transition-all duration-300"
                     onClick={() => setSelectedMember(member)}
                   >
+<<<<<<< HEAD
                     <Card className="h-full bg-gray bg-opacity-20 backdrop-blur-lg border-gray-600 border-4 hover:shadow-2xl transition-shadow duration-300">
                       <CardHeader>
                         <div className="relative w-full pb-[100%] mb-4 overflow-hidden rounded-t-lg" style={{backgroundColor: 'transparent'}}>
                           <img
                             src={`/site_edh/images/${member.image}`}
+=======
+                    <Card className="h-full hover:shadow-2xl transition-shadow duration-300">
+                      <CardHeader>
+                        <div className="relative w-full pb-[100%] mb-4 overflow-hidden rounded-t-lg">
+                          <img
+                            src={`images/${member.image}`}
+>>>>>>> 422dbd255e0fcb73dfd4960b20fe4751866095cd
                             alt={member.title}
                             className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 hover:scale-105"
                           />
                         </div>
+<<<<<<< HEAD
                         <CardTitle className="text-x4 font-bold text-[#BEA151] font-gallient">{member.title}</CardTitle>
                         <p className="text-[#BEA151] font-medium font-gallient">{member.profession}</p>
+=======
+                        <CardTitle className="text-xl font-bold text-blue-900">{member.title}</CardTitle>
+                        <p className="text-blue-700 font-medium">{member.profession}</p>
+>>>>>>> 422dbd255e0fcb73dfd4960b20fe4751866095cd
                       </CardHeader>
                     </Card>
                   </motion.div>
@@ -170,18 +214,30 @@ export const Team = () => {
             </CarouselContent>
             <CarouselPrevious 
               style={{ width: '40px', height: '80px' }} 
+<<<<<<< HEAD
               className="bg-gray-400 hover:bg-gray-400 [&>svg]:text-white [&>svg]:hover:text-white" 
             />
             <CarouselNext 
               style={{ width: '40px', height: '80px' }} 
               className="bg-gray-400 hover:bg-gray-400 [&>svg]:text-white [&>svg]:hover:text-white" 
+=======
+              className="bg-blue-500 hover:bg-blue-600 [&>svg]:text-white [&>svg]:hover:text-white" 
+            />
+            <CarouselNext 
+              style={{ width: '40px', height: '80px' }} 
+              className="bg-blue-500 hover:bg-blue-600 [&>svg]:text-white [&>svg]:hover:text-white" 
+>>>>>>> 422dbd255e0fcb73dfd4960b20fe4751866095cd
             />
           </Carousel>
         </motion.div>
       </div>
 
       <Dialog open={!!selectedMember} onOpenChange={() => setSelectedMember(null)}>
+<<<<<<< HEAD
         <DialogContent className="max-w-2x1 text-white">
+=======
+        <DialogContent className="max-w-2x1">
+>>>>>>> 422dbd255e0fcb73dfd4960b20fe4751866095cd
           {selectedMember && (
             <>
               <DialogHeader>
@@ -195,7 +251,11 @@ export const Team = () => {
                     className="absolute inset-0 w-full h-full object-contain rounded-lg"
                   />
                 </div>
+<<<<<<< HEAD
                 <p className="text-white leading-relaxed">
+=======
+                <p className="text-gray-700 leading-relaxed">
+>>>>>>> 422dbd255e0fcb73dfd4960b20fe4751866095cd
                   {selectedMember.description}
                 </p>
               </div>

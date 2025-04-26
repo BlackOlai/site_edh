@@ -26,6 +26,7 @@ const cardHover = {
 
 export const About = () => {
   return (
+<<<<<<< HEAD
     <section 
       id="sobre" 
       className="relative min-h-screen w-full overflow-hidden"
@@ -38,6 +39,9 @@ export const About = () => {
         backgroundBlendMode: 'overlay' // Mistura o fundo com a imagem
       }}
     >
+=======
+    <section id="sobre" className="relative min-h-screen w-full overflow-hidden bg-purple-200">
+>>>>>>> 422dbd255e0fcb73dfd4960b20fe4751866095cd
       {/* Onda Superior */}
       <div className="absolute top-0 left-0 w-full overflow-hidden leading-none">
         <svg className="relative block w-full h-[50px]" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -56,9 +60,34 @@ export const About = () => {
           variants={staggerContainer}
           initial="hidden"
           whileInView="visible"
+<<<<<<< HEAD
           viewport={{ once: false, margin: "-100px" }}
           className="text-center pt-10"
         >
+=======
+          viewport={{ once: true, margin: "-100px" }}
+          className="text-center pt-10"
+        >
+          {/* Mosaico com zoom suave */}
+          <motion.div 
+            variants={fadeInUp}
+            whileHover={{ scale: 1.02 }}
+            transition={{ duration: 0.5 }}
+            className="relative mb-16 mt-12"
+          >
+            <div className="absolute inset-0 bg-gradient-to-b from-purple-300/30 to-purple-200/50 backdrop-blur-sm rounded-lg"></div>
+            <div className="w-full h-[500px] relative rounded-lg shadow-2xl overflow-hidden">
+              <motion.img 
+                src="/site_edh/images/mosaico.jpg"
+                alt="Mosaico EDH"
+                className="w-full h-full object-cover object-top opacity-80" // Adicionado opacity-80 aqui
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.8 }}
+              />
+            </div>
+          </motion.div>
+
+>>>>>>> 422dbd255e0fcb73dfd4960b20fe4751866095cd
           {/* Cards principais com hover effect */}
           <div className="grid lg:grid-cols-3 gap-8 mb-12">
             <motion.div 
@@ -66,6 +95,7 @@ export const About = () => {
               whileHover="hover"
               className="bg-white/80 backdrop-blur-sm p-8 rounded-xl shadow-lg transform transition-all duration-300"
             >
+<<<<<<< HEAD
               <motion.h2 variants={fadeInUp} className="text-3xl font-bold text-[#121D2B] mb-6">Quem Somos</motion.h2>
               <motion.p variants={fadeInUp} className="text-black leading-relaxed text-left">
                 Somos uma instituição que se preocupa com o bem-estar das pessoas, oferecendo serviços de qualidade em diversas áreas da saúde, com a finalidade de promover o desenvolvimento integral de nossos clientes. Nascemos do sonho de ter um espaço dialógico de busca por qualidade de vida, que fosse acolhedor e ético, mas basicamente humanizado, reconhecendo a diversidade existente em nossa sociedade e a singularidade que cada um constrói a partir de sua trajetória de vida, sobre si mesmo e seu lugar no mundo. Por isso, somos gente cuidando de gente!!
@@ -89,6 +119,31 @@ export const About = () => {
              className="bg-white/80 backdrop-blur-sm p-8 rounded-xl shadow-lg"
             >
               <h2 className="text-3xl font-bold text-[#121D2B] mb-6">Visão</h2>
+=======
+              <h2 className="text-3xl font-bold text-purple-900 mb-6">Quem Somos</h2>
+              <p className="text-black leading-relaxed text-left">
+                Somos uma instituição que se preocupa com o bem-estar das pessoas, oferecendo serviços de qualidade em diversas áreas da saúde, com a finalidade de promover o desenvolvimento integral de nossos clientes. Nascemos do sonho de ter um espaço dialógico de busca por qualidade de vida, que fosse acolhedor e ético, mas basicamente humanizado, reconhecendo a diversidade existente em nossa sociedade e a singularidade que cada um constrói a partir de sua trajetória de vida, sobre si mesmo e seu lugar no mundo. Por isso, somos gente cuidando de gente!!
+              </p>
+            </motion.div>
+
+            <motion.div 
+              variants={fadeInUp}
+              className="bg-white/80 backdrop-blur-sm p-8 rounded-xl shadow-lg"
+            >
+              <h2 className="text-3xl font-bold text-purple-900 mb-6">Missão</h2>
+              <p className="text-black leading-relaxed text-left">
+                Oferecer aos clientes EDH serviços de qualidade em saúde e educação que promovam o desenvolvimento pleno e 
+                constante das pessoas desde a infância, considerando as potencialidades e singularidades de cada um, num espaço 
+                dialógico de construção de conhecimento sobre si mesmo e sobre o mundo que o cerca.
+              </p>
+            </motion.div>
+
+            <motion.div 
+              variants={fadeInUp}
+              className="bg-white/80 backdrop-blur-sm p-8 rounded-xl shadow-lg"
+            >
+              <h2 className="text-3xl font-bold text-purple-900 mb-6">Visão</h2>
+>>>>>>> 422dbd255e0fcb73dfd4960b20fe4751866095cd
               <p className="text-black leading-relaxed text-left">
                 Reconhecemos a pessoa como sujeito que se desenvolve ao longo da vida, de maneira constante e nas vivências do 
                 cotidiano, construindo uma dinâmica relacional singular com a sociedade. Com isso, queremos ser referência na 
@@ -99,6 +154,7 @@ export const About = () => {
           </div>
 
           {/* Seção de Valores */}
+<<<<<<< HEAD
           <motion.div
             variants={staggerContainer}
             initial="hidden"
@@ -109,10 +165,20 @@ export const About = () => {
             <motion.h2
               variants={fadeInUp}
               className="text-6xl font-bold text-[#BEA151] mb-8 text-center"
+=======
+          <motion.div 
+            variants={fadeInUp}
+            className="mt-12 bg-white/80 backdrop-blur-sm p-10 rounded-xl shadow-lg"
+          >
+            <motion.h2 
+              variants={fadeInUp}
+              className="text-4xl font-bold text-purple-900 mb-8 text-center"
+>>>>>>> 422dbd255e0fcb73dfd4960b20fe4751866095cd
             >
               Valores
             </motion.h2>
             <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
+<<<<<<< HEAD
               <motion.div
                 whileHover={{ scale: 1.02 }}
                 className="bg-white/80 p-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300"
@@ -170,6 +236,65 @@ export const About = () => {
            </div>
          </motion.div>
        </motion.div>
+=======
+              <motion.div 
+                whileHover={{ scale: 1.02 }}
+                className="bg-purple-50 p-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300"
+              >
+                <h3 className="font-bold text-purple-900 text-2xl mb-4">Ética</h3>
+                <p className="text-black leading-relaxed text-left">
+                  Atuamos com respeito, sigilo, responsabilidade e alteridade, garantindo práticas profissionais alinhadas aos 
+                  princípios legais e morais que norteiam a saúde e a educação.
+                </p>
+              </motion.div>
+
+              <motion.div 
+                whileHover={{ scale: 1.02 }}
+                className="bg-purple-50 p-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300"
+              >
+                <h3 className="font-bold text-purple-900 text-2xl mb-4">Compromisso</h3>
+                <p className="text-black leading-relaxed text-left">
+                  Buscamos a excelência no cuidado, com o desenvolvimento contínuo da equipe e com a confiança 
+                  depositada por cada pessoa que busca nosso espaço, honrando essa confiança com seriedade e dedicação.
+                </p>
+              </motion.div>
+
+              <motion.div 
+                whileHover={{ scale: 1.02 }}
+                className="bg-purple-50 p-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300"
+              >
+                <h3 className="font-bold text-purple-900 text-2xl mb-4">Acolhimento</h3>
+                <p className="text-black leading-relaxed text-left">
+                  Acolher cada indivíduo com escuta ativa, empatia e sensibilidade, respeitando sua história, suas dores e 
+                  seus tempos, é nossa prioridade.
+                </p>
+              </motion.div>
+
+              <motion.div 
+                whileHover={{ scale: 1.02 }}
+                className="bg-purple-50 p-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300"
+              >
+                <h3 className="font-bold text-purple-900 text-2xl mb-4">Cientificidade</h3>
+                <p className="text-black leading-relaxed text-left">
+                  Nossas práticas são orientadas pelo saber científico, e buscamos constante atualização, 
+                  fundamentando nossas condutas em evidências científicas, assegurando a qualidade e a segurança no cuidado.
+                </p>
+              </motion.div>
+
+              <motion.div 
+                whileHover={{ scale: 1.02 }}
+                className="bg-purple-50 p-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300"
+              >
+                <h3 className="font-bold text-purple-900 text-2xl mb-4">Humanização</h3>
+                <p className="text-black leading-relaxed text-left">
+                  Acreditamos que o atendimento humanizado, que reconheça e respeite a singularidade de cada um 
+                  deva ser a essência dos serviços em saúde e educação, e desta forma procuramos atender nossos clientes.
+                </p>
+              </motion.div>
+            </div>
+          </motion.div>
+        </motion.div>
+>>>>>>> 422dbd255e0fcb73dfd4960b20fe4751866095cd
       </div>
 
       {/* Onda Inferior */}

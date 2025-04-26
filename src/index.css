@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @font-face {
   font-family: 'Gallient-regular';
   src: url('/fonts/Gallient-regular.woff2') format('woff2'); /* Adjust path and format if needed */
@@ -5,6 +6,8 @@
   font-style: normal;
 }
 
+=======
+>>>>>>> 422dbd255e0fcb73dfd4960b20fe4751866095cd
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -22,7 +25,11 @@
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
     --muted: 210 40% 96.1%;
+<<<<<<< HEAD
     --muted-foreground: 0 0% 0%;
+=======
+    --muted-foreground: 215.4 16.3% 46.9%;
+>>>>>>> 422dbd255e0fcb73dfd4960b20fe4751866095cd
     --accent: 210 40% 96.1%;
     --accent-foreground: 222.2 47.4% 11.2%;
     --destructive: 0 84.2% 60.2%;

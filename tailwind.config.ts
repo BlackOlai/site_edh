@@ -74,11 +74,16 @@ export default {
         "fade-up": "fade-up 0.5s ease-out",
       },
     },
+<<<<<<< HEAD
       fontFamily: {
         gallient: ['Gallient-regular'],
       },
       boxShadow: {
         '#BEA151': '0 16px 20px -5px rgb(#BEA151), 0 8px 12px -5px rgba(#BEA151)',
+=======
+      boxShadow: {
+        'blue-shadow': '0 16px 20px -5px rgb(103, 103, 251), 0 8px 12px -5px rgba(38, 5, 168, 0.87)',
+>>>>>>> 422dbd255e0fcb73dfd4960b20fe4751866095cd
       },
   },
   plugins: [require("tailwindcss-animate")],
